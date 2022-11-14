@@ -83,6 +83,7 @@ textarea {
 
 .saved-notes-div {
   margin: 40px auto 40px auto;
+  text-transform: capitalize;
 }
 
 .saved-notes-div h1 {

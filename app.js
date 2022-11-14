@@ -87,6 +87,14 @@ btn.addEventListener('click', () => {
     }
 });
 
+notes.addEventListener("keydown", (event) => {
+    if (event.key == 'Enter') {
+        appendingNotes();
+        title.value = '';
+        notes.value = '';
+    }
+});
+
 function appendingNotes() {
     const div = document.createElement('div');
     h3 = document.createElement('h3');
@@ -99,10 +107,10 @@ function appendingNotes() {
 
     div.className = 'note';
     div.id = 'saved-notes';
-    h3.innerText = title.value;
+    h3.innerText = title.value.trim();
     h3.id = 'note-title';
     p.id = 'note-desc';
-    p.innerText = notes.value;
+    p.innerText = notes.value.trim();
 
     btnDiv.className = 'buttons';
 
